@@ -21,7 +21,7 @@ Usage::
 
 setup(
     name='env3',
-    version='0.0.2',
+    version='0.0.3',
     description='Read .env file',
     long_description=LONGDOC,
     author='Hai Liang Wang',

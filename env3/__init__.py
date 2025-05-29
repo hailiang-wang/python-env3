@@ -90,9 +90,11 @@ def read_env(dotenv_file = None):
         default_env2 = os.path.join(HOME_DIRECTORY, ".env")
 
         if not os.path.exists(default_env2):
-            raise BaseException("[env.py] .env file default path not present at %s and %s"% (default_env, default_env2))
+            print("[env.py] .env file default path not present at %s and %s"% (default_env, default_env2))
+        else:
+            return parse_env(default_env2)
         
-        return parse_env(default_env2)
+        return ENVIRON
     else:
         if not os.path.exists(dotenv_file):
             raise BaseException("[env.py] .env file path not present with argv: " + dotenv_file)

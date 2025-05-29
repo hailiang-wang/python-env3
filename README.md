@@ -10,7 +10,7 @@ pip install -U env3
 1) first, try to read env from parameter
 2) second, try to read env from cwd dir
 3) third, try to read env from ~/.env
-
+4) if above envfile not present, just return the current ENV as `ENVIRON = os.environ.copy()`
 
 ```
 import env3
