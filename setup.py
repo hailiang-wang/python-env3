@@ -12,7 +12,7 @@ Usage::
 
     import env3
 
-    ENV = env3.read_env(".env")
+    ENV = env3.load_env(".env")
     print(ENV.get("HOME", "default"))
     env3.print_env(ENV)
 
@@ -21,7 +21,7 @@ Usage::
 
 setup(
     name='env3',
-    version='0.0.3',
+    version='0.0.5',
     description='Read .env file',
     long_description=LONGDOC,
     author='Hai Liang Wang',

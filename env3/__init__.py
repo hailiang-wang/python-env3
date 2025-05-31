@@ -99,3 +99,14 @@ def read_env(dotenv_file = None):
         if not os.path.exists(dotenv_file):
             raise BaseException("[env.py] .env file path not present with argv: " + dotenv_file)
         return parse_env(dotenv_file)
+    
+
+def load_env(dotenv_file = None):
+    '''
+    First read env, then inject ENV into os.environ
+    '''
+    ENV = read_env(dotenv_file=dotenv_file)
+    for k in ENV.keys():
+        os.environ[k] = ENV.get(k)
+
+    return ENV

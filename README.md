@@ -15,12 +15,14 @@ pip install -U env3
 ```
 import env3
 
-ENV = env3.read_env() # env3.read_env(ENV_FILE_PATH), ENV_FILE_PATH is optional
+ENV = env3.load_env() # env3.load_env(ENV_FILE_PATH), ENV_FILE_PATH is optional
 print(ENV)
 print(ENV.get("DEEKSEEK_MODEL"))
 print(ENV.get("DEEKSEEK_MODEL2", "foo"))
 env3.print_env(ENV)
 ```
+
+Use `env3.read_env()` if don't want to impact the os.environ, but get another `ENV` instance only.
 
 # License
 

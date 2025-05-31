@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: env3
-Version: 0.0.3
+Version: 0.0.5
 Summary: Read .env file
 Home-page: https://github.com/hailiang-wang/python-env3
 Author: Hai Liang Wang
@@ -28,7 +28,7 @@ Usage::
 
     import env3
 
-    ENV = env3.read_env(".env")
+    ENV = env3.load_env(".env")
     print(ENV.get("HOME", "default"))
     env3.print_env(ENV)
 
