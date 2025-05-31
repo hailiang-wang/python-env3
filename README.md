@@ -24,6 +24,16 @@ env3.print_env(ENV)
 
 Use `env3.read_env()` if don't want to impact the os.environ, but get another `ENV` instance only.
 
+# Best practice
+
+```
+import os, env3
+env3.load_env(os.path.join(os.getcwd(), ".env"))
+
+os.environ.get("SOME_KEY", "default value")
+```
+
+
 # License
 
 [LICENSE](./LICENSE)
