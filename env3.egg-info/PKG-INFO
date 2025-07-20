@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: env3
-Version: 0.0.5
+Version: 0.0.7
 Summary: Read .env file
 Home-page: https://github.com/hailiang-wang/python-env3
 Author: Hai Liang Wang
@@ -15,6 +15,15 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.11
 License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
 
 
 env3

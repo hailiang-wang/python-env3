@@ -20,6 +20,7 @@ print(ENV)
 print(ENV.get("DEEKSEEK_MODEL"))
 print(ENV.get("DEEKSEEK_MODEL2", "foo"))
 env3.print_env(ENV)
+env3.get_envfile_path() # get envfile path lastly read one, can be retrieve with ENV.get("ENV3_ENV_FILE") too
 ```
 
 Use `env3.read_env()` if don't want to impact the os.environ, but get another `ENV` instance only.

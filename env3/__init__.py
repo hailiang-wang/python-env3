@@ -41,6 +41,14 @@ else:
 # ENV object, https://blog.csdn.net/ad72182009/article/details/116117744
 ENVIRON = os.environ.copy()
 
+# Lastly resolved env file path
+env_file = None
+
+def get_envfile_path():
+    '''
+    Only return the last one retrieved env file path
+    '''
+    return env_file
 
 def print_env(env_obj):
     '''
@@ -54,7 +62,7 @@ def parse_env(dotenv_file):
     '''
     Parse env file, inject values into ENV
     '''
-    print("[env.py] parse_env: %s" % dotenv_file)
+    # print("[env.py] parse_env: %s" % dotenv_file)
 
     with open(dotenv_file, mode="r", encoding="utf-8") as fin:
         lines = fin.readlines()
@@ -68,6 +76,10 @@ def parse_env(dotenv_file):
             else:
                 print("[env.py] skip invalid format: %s" % y)
         
+        global env_file
+        env_file = dotenv_file
+        ENVIRON["ENV3_ENV_FILE"] = env_file
+
         return ENVIRON
 
 def read_env(dotenv_file = None):
